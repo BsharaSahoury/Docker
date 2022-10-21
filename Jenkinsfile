@@ -13,15 +13,6 @@ pipeline {
          }
       }
 
-	stage('To update sources of the website') {
-         steps {
-	 sh '''
-        cd docker
-	    echo "Input param ${NAME}"		
-	    echo "<p>Hello from ${NAME}!</p>" >> index.html
-	 '''
-         }
-      } 
 	  
 	   
 	stage('Build a docker image') {
