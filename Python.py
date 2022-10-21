@@ -1,2 +1,2 @@
-with open('readme.txt', 'w') as f:
-    f.write('readme\n')
+with open('/home/Docker-proj/volume/Output.txt', 'w') as f:
+    f.write('Python.py file output\n')
