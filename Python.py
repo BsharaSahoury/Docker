@@ -8,5 +8,5 @@ time.sleep(15)
 
 if (time.time() - start_time) >= 10:
     with open('/home/Docker-proj/volume/Output.txt', 'w') as f:
-        f.write('Failed test')
+        f.write('Failed test\n')
     
