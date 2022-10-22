@@ -27,7 +27,7 @@ pipeline {
 	stage('Push a docker image') {
          steps {
 			sh '''
-				docker tag mywebsite:${BUILD_NUMBER} ${REPO_NAME}/alpcon:${BUILD_NUMBER}
+				docker tag alpcon:${BUILD_NUMBER} ${REPO_NAME}/alpcon:${BUILD_NUMBER}
 				docker push ${REPO_NAME}/alpcon:${BUILD_NUMBER}
 			'''
          }
