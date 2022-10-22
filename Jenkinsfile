@@ -47,7 +47,7 @@ pipeline {
 					docker rm ${CONTAINER}
 				fi
 				echo "Running a new container"
-				docker run -d -v ${HOME}/Documents/volume_proj:${HOME}/Documents/volume_proj ${REPO_NAME}/alpcon:${BUILD_NUMBER}
+				docker run -d -v ${HOME}/Documents/volume_proj:/home/Docker-proj/volume ${REPO_NAME}/alpcon:${BUILD_NUMBER}
 				echo "Finished"
 			'''
          }
