@@ -19,7 +19,6 @@ pipeline {
          steps {
             echo 'Build process..'            
             sh '''
-                cd docker
 		docker build -t="AlpCon:${BUILD_NUMBER}" .
             '''
          }
