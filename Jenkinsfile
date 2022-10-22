@@ -27,8 +27,8 @@ pipeline {
 	stage('Push a docker image') {
          steps {
 			sh '''
-				docker tag mywebsite:${BUILD_NUMBER} ${REPO_NAME}/AlpCon:${BUILD_NUMBER}
-				docker push ${REPO_NAME}/AlpCon:${BUILD_NUMBER}
+				docker tag mywebsite:${BUILD_NUMBER} ${REPO_NAME}/alpcon:${BUILD_NUMBER}
+				docker push ${REPO_NAME}/alpcon:${BUILD_NUMBER}
 			'''
          }
       }
@@ -47,7 +47,7 @@ pipeline {
 					docker rm ${CONTAINER}
 				fi
 				echo "Running a new container"
-				docker run -d -v ${HOME}/Documents/volume_proj:${HOME}/Documents/volume_proj ${REPO_NAME}/AlpCon:${BUILD_NUMBER}
+				docker run -d -v ${HOME}/Documents/volume_proj:${HOME}/Documents/volume_proj ${REPO_NAME}/alpcon:${BUILD_NUMBER}
 				echo "Finished"
 			'''
          }
