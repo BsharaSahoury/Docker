@@ -1,10 +1,8 @@
 FROM alpine:3.14
 RUN apk add --no-cache python3
+RUN apk add install python3-pip
 WORKDIR /app
 ADD . /app
-RUN set -xe \
-    && apt-get update \
-    && apt-get install python3-pip
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN mkdir -p /home/Docker-proj
