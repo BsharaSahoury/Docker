@@ -26,5 +26,4 @@ if __name__ == '__main__':
     # Cleanup
     p.join()
     
-    with open('/home/Docker-proj/volume/Output.txt', 'w') as f:
-        f.write('Failed test\n')
+
